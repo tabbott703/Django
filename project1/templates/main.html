@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
     <title>Project</title>
 </head>
 <body>
@@ -11,11 +13,10 @@
     {% if messages %}
 <ul class="messages">
     {% for message in messages %}
-        <li></li>{{ message }}</li>
+        <li>{{ message }}</li>
     {% endfor %}
 </ul>
 {% endif %}
-
     {% block content  %}
 
 
